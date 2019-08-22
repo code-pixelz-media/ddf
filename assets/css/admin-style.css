@@ -75,6 +75,18 @@ a:focus{
     float: right;
 }
 
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
 hr{
     border: none;
     border-top: 1px solid #eeeeee;
