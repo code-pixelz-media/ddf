@@ -651,6 +651,7 @@ h6{
     border-top-right-radius: 4px;
     color: #ffffff;
     display: block;
+    margin: 0;
     padding: 12px 30px 14px 25px;
     text-decoration: none;
 }
