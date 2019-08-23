@@ -443,7 +443,8 @@ h6{
 }
 
 .cpm-plugin-wrap form input[type=radio],
-.cpm-plugin-wrap form input[type=checkbox] {
+.cpm-plugin-wrap form input[type=checkbox],
+.cpm-plugin-wrap .wp-color-result.button {
     margin: 10px 5px 10px 0;
 }
 
@@ -702,6 +703,10 @@ h6{
 
 .cpm-plugin-wrap .tabs-wrap #extra .tab-title:before{
     content: "\f107";
+}
+
+.swoopercart-wrap .tabs-wrap .tab-content > form:first-child{
+    margin: 0 0 30px;
 }
 
 /*--------------------------------------------------------------
