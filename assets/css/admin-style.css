@@ -385,13 +385,16 @@ h6{
 
 .cpm-plugin-wrap .cpm-btn{
     background: #8f71d4;
+    border: none;
     border-radius: 4px;
     color: #ffffff;
     cursor: pointer;
     display: inline-block;
     font-size: inherit;
     font-weight: 500;
+    height: auto;
     padding: 10px 25px;
+    text-shadow: none;
     text-transform: uppercase;
 
     -webkit-appearance: none;
