@@ -1,21 +1,4 @@
 /*-------------------*\
-    #FONT-FACE
-\*-------------------*/
-
-@font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello.eot?54620740');
-  src: url('../font/fontello.eot?54620740#iefix') format('embedded-opentype'),
-  url('../font/fontello.woff?54620740') format('woff'),
-  url('../font/fontello.ttf?54620740') format('truetype'),
-  url('../font/fontello.svg?54620740#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/********************************************************************************************************/
-
-/*-------------------*\
     #GENERAL
 \*-------------------*/
 
@@ -116,34 +99,34 @@ h3,
 h4,
 h5,
 h6{
-	font-weight: 600;
-	line-height: 1.3;
-	margin: 0 0 12px;
-	padding: 0;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 12px;
+    padding: 0;
 }
 
 h1{
-	font-size: 36px;
+    font-size: 36px;
 }
 
 h2{
-	font-size: 30px;
+    font-size: 30px;
 }
 
 h3{
-	font-size: 24px;
+    font-size: 24px;
 }
 
 h4{
-	font-size: 18px;
+    font-size: 18px;
 }
 
 h5{
-	font-size: 14px;
+    font-size: 14px;
 }
 
 h6{
-	font-size: 12px;
+    font-size: 12px;
 }
 
 .dashicons, .dashicons-before:before{
@@ -158,7 +141,7 @@ h6{
  */
 
 .row{
-	margin-left: -15px;
+    margin-left: -15px;
     margin-right: -15px;
 }
 
@@ -196,7 +179,7 @@ h6{
 }
 
 .col-xs-4{
-	width: 33.33333333%;
+    width: 33.33333333%;
 }
 
 .col-xs-5{
@@ -421,9 +404,9 @@ h6{
 }
 
 .cpm-plugin-wrap .cpm-btn:before{
-	height: auto;
+    height: auto;
     line-height: 20px;
-	vertical-align: top;
+    vertical-align: top;
 }
 
 .cpm-plugin-wrap .cpm-btn:hover{
@@ -432,7 +415,7 @@ h6{
 }
 
 .cpm-plugin-wrap .cpm-btn.btn2{
-	background: #393738;
+    background: #393738;
 }
 
 .cpm-plugin-wrap .cpm-btn.btn2:hover{
@@ -590,15 +573,15 @@ h6{
 }
 
 .cpm-plugin-wrap .header-wrap .addbanner-wrap{
-	text-align: center;
+    text-align: center;
 }
 
 .cpm-plugin-wrap .header-wrap .btn-wrap{
-	text-align: right;
+    text-align: right;
 }
 
 .cpm-plugin-wrap .header-wrap .cpm-btn{
-	margin-left: 5px;
+    margin-left: 5px;
 }
 
 /********************************************************************************************************/
@@ -623,6 +606,7 @@ h6{
 }
 
 .cpm-plugin-wrap .tabs-wrap .tab-menu{
+    border: none;
     margin: 0;
     overflow: hidden;
 }
@@ -630,6 +614,7 @@ h6{
 .cpm-plugin-wrap .tabs-wrap .tab-menu li{
     background: none;
     border: none;
+    float: left;
     margin: 0 5px 0 0;
     padding: 0;
 
@@ -720,36 +705,36 @@ h6{
  */
 
 .cpm-plugin-wrap .cpm-table-wrap{
-	font-size: 14px;
-	margin: 20px 0;
-	overflow-x: scroll;
+    font-size: 14px;
+    margin: 20px 0;
+    overflow-x: scroll;
 }
 
 .cpm-plugin-wrap .cpm-table-wrap table{
-	border-spacing: 0;
-	margin: 20px 0;
-	width: 100%;
+    border-spacing: 0;
+    margin: 20px 0;
+    width: 100%;
 }
 
 .cpm-plugin-wrap .cpm-table-wrap thead th,
 .cpm-plugin-wrap .cpm-table-wrap tbody td{
-	padding: 15px;
-	text-align: left;
+    padding: 15px;
+    text-align: left;
 }
 
 .cpm-plugin-wrap .cpm-table-wrap thead th{
-	border-left: 1px solid #ddd;
+    border-left: 1px solid #ddd;
 }
 
 .cpm-plugin-wrap .cpm-table-wrap tbody td{
-	border: none;
-	border-top: 1px solid #ddd;
-	border-left: 1px solid #ddd;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
 }
 
 .cpm-plugin-wrap .cpm-table-wrap thead th:first-child,
 .cpm-plugin-wrap .cpm-table-wrap tbody td:first-child{
-	border-left: none;
+    border-left: none;
 }
 
 .cpm-plugin-wrap .cpm-table-wrap tbody tr:nth-of-type(odd) td {
@@ -921,9 +906,9 @@ h6{
 
 @media ( max-width: 767px){
 
-	.cpm-plugin-wrap .header-wrap .cpm-btn {
-	    margin-left: 0;
-	}
+    .cpm-plugin-wrap .header-wrap .cpm-btn {
+        margin-left: 0;
+    }
 
 
     .cpm-plugin-wrap .footer-nav li{
@@ -937,47 +922,47 @@ h6{
         display: none;
     }
 
-	.cpm-plugin-wrap .tabs-wrap .tab-menu li{
-		display: block;
-		float: none;
-		margin: 1px 0 0;
+    .cpm-plugin-wrap .tabs-wrap .tab-menu li{
+        display: block;
+        float: none;
+        margin: 1px 0 0;
 
-		-webkit-transform: translateY(0);
-	    -moz-transform: translateY(0);
-	    -ms-transform: translateY(0);
-	    -o-transform: translateY(0);
-	    transform: translateY(0);
-	}
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
 
-	.cpm-plugin-wrap .tabs-wrap .tab-menu li.ui-tabs-active{
-		box-shadow: none;
-		-webkit-transform: translateY(0);
-	    -moz-transform: translateY(0);
-	    -ms-transform: translateY(0);
-	    -o-transform: translateY(0);
-	    transform: translateY(0);
-	}
+    .cpm-plugin-wrap .tabs-wrap .tab-menu li.ui-tabs-active{
+        box-shadow: none;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
 
-	.cpm-plugin-wrap .tabs-wrap .tab-menu li a{
-		padding: 12px 20px 14px;
-	}
+    .cpm-plugin-wrap .tabs-wrap .tab-menu li a{
+        padding: 12px 20px 14px;
+    }
 
-	.cpm-plugin-wrap .tabs-wrap .tab-content{
-		padding: 20px;
-	}
+    .cpm-plugin-wrap .tabs-wrap .tab-content{
+        padding: 20px;
+    }
 
-	.cpm-plugin-wrap form label,
-	.cpm-plugin-wrap form .form-control-wrap{
-		float: none;
-		width: 100%;
-	}
+    .cpm-plugin-wrap form label,
+    .cpm-plugin-wrap form .form-control-wrap{
+        float: none;
+        width: 100%;
+    }
 
-	.cpm-plugin-wrap form .form-control{
-		width: 100%;
-	}
+    .cpm-plugin-wrap form .form-control{
+        width: 100%;
+    }
 
-	.cpm-plugin-wrap form .cpm-btn{
-		margin-left: 0;
-	}
+    .cpm-plugin-wrap form .cpm-btn{
+        margin-left: 0;
+    }
 
 }
