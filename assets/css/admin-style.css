@@ -393,6 +393,7 @@ h6{
     font-size: inherit;
     font-weight: 500;
     height: auto;
+    outline: none;
     padding: 10px 25px;
     text-shadow: none;
     text-transform: uppercase;
