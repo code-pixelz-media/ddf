@@ -40,6 +40,7 @@ if ( !class_exists('Cpm_Plugin') ) {
 
             wp_enqueue_script('jquery-ui-tabs');
             wp_enqueue_script( 'admin-script', plugin_dir_url( __FILE__ ).'assets/js/admin-script.js' );
+            wp_enqueue_script( 'chart-script', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' );
 
         }
 

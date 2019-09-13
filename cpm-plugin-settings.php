@@ -101,6 +101,22 @@ if ( !defined( 'ABSPATH' ) ) exit;
                         </div>
                     </form>
 
+                    <div class="success-box">
+                        This is a success message
+                    </div>
+
+                    <div class="error-box">
+                        This is an error message
+                    </div>
+
+                    <div class="info-box">
+                        This is an info message
+                    </div>
+
+                    <div class="warning-box">
+                        This is a warning message
+                    </div>
+
                     <hr>
 
                     <h3>This is just a random table</h3>
@@ -313,10 +329,195 @@ if ( !defined( 'ABSPATH' ) ) exit;
             </div>
         </div>
 
+        <div class="chart-sec">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card-block">
+                        <div class="title-wrap">
+                            <h3 class="title"><a href="">Bar Chart Example</a></h3>
+                        </div>
+                        <div class="content">
+                            <canvas id="bar-chart" width="800" height="450"></canvas>
+                            <script>
+                                // Bar chart
+                                new Chart(document.getElementById("bar-chart"), {
+                                    type:"bar",
+                                    data: {
+                                        labels: ["January","February","March","April","May","June","July"],
+                                        datasets: [
+                                            {
+                                                label : "Chart.js Bar Chart",
+                                                data: [65,59,80,81,56,55,40],
+                                                fill: false,
+                                                backgroundColor: ["rgba(255, 99, 132, 0.2)","rgba(255, 159, 64, 0.2)","rgba(255, 205, 86, 0.2)","rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)","rgba(201, 203, 207, 0.2)"],
+                                                borderColor: ["rgb(255, 99, 132)","rgb(255, 159, 64)","rgb(255, 205, 86)","rgb(75, 192, 192)","rgb(54, 162, 235)","rgb(153, 102, 255)","rgb(201, 203, 207)"],
+                                                borderWidth:1
+                                            }
+                                        ]
+                                    },
+                                    options: {
+                                        scales: {
+                                            yAxes: [
+                                                {
+                                                    ticks:{
+                                                        beginAtZero:true
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card-block">
+                        <div class="title-wrap">
+                            <h3 class="title"><a href="">Horizontal Bar Chart Example</a></h3>
+                        </div>
+                        <div class="content">
+                            <canvas id="hori-bar-chart" width="800" height="450"></canvas>
+                            <script>
+                                // Bar chart
+                                new Chart(document.getElementById("hori-bar-chart"), {
+                                    type: 'horizontalBar',
+                                    data: {
+                                        labels: ["January","February","March","April","May","June","July"],
+                                        datasets: [
+                                            {
+                                                label : "Chart.js Bar Chart",
+                                                data: [65,59,80,81,56,55,40],
+                                                fill: false,
+                                                backgroundColor: ["rgba(255, 99, 132, 0.2)","rgba(255, 159, 64, 0.2)","rgba(255, 205, 86, 0.2)","rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)","rgba(201, 203, 207, 0.2)"],
+                                                borderColor: ["rgb(255, 99, 132)","rgb(255, 159, 64)","rgb(255, 205, 86)","rgb(75, 192, 192)","rgb(54, 162, 235)","rgb(153, 102, 255)","rgb(201, 203, 207)"],
+                                                borderWidth:1
+                                            }
+                                        ]
+                                    },
+                                    options: {
+                                        scales: {
+                                            yAxes: [
+                                                {
+                                                    ticks:{
+                                                        beginAtZero:true
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card-block">
+                        <div class="title-wrap">
+                            <h3 class="title"><a href="">Line Chart Example</a></h3>
+                        </div>
+                        <div class="content">
+                            <canvas id="line-chart" width="800" height="450"></canvas>
+                            <script>new Chart(document.getElementById("line-chart"),{"type":"line","data":{"labels":["January","February","March","April","May","June","July"],"datasets":[{"label":"Line Chart Example","data":[65,59,80,81,56,55,40],"fill":false,"borderColor":"rgb(75, 192, 192)","lineTension":0.1}]},"options":{}});</script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card-block">
+                        <div class="title-wrap">
+                            <h3 class="title"><a href="">Multiple Line Chart Example</a></h3>
+                        </div>
+                        <div class="content">
+                                <canvas id="multi-line-chart" width="800" height="450"></canvas>
+                            <script>
+                                new Chart(document.getElementById("multi-line-chart"), {
+                                  type: 'line',
+                                  data: {
+                                    labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+                                    datasets: [{
+                                        data: [86,114,106,106,107,111,133,221,783,2478],
+                                        label: "Africa",
+                                        borderColor: "#3e95cd",
+                                        fill: false
+                                      }, {
+                                        data: [282,350,411,502,635,809,947,1402,3700,5267],
+                                        label: "Asia",
+                                        borderColor: "#8e5ea2",
+                                        fill: false
+                                      }, {
+                                        data: [168,170,178,190,203,276,408,547,675,734],
+                                        label: "Europe",
+                                        borderColor: "#3cba9f",
+                                        fill: false
+                                      }, {
+                                        data: [40,20,10,16,24,38,74,167,508,784],
+                                        label: "Latin America",
+                                        borderColor: "#e8c3b9",
+                                        fill: false
+                                      }, {
+                                        data: [6,3,2,2,7,26,82,172,312,433],
+                                        label: "North America",
+                                        borderColor: "#c45850",
+                                        fill: false
+                                      }
+                                    ]
+                                  },
+                                  options: {
+                                    title: {
+                                      display: true,
+                                      text: 'World population per region (in millions)'
+                                    }
+                                  }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card-block">
+                        <div class="title-wrap">
+                            <h3 class="title"><a href="">Pie Chart Example</a></h3>
+                        </div>
+                        <div class="content">
+                            <canvas id="pie-chart" width="800" height="450"></canvas>
+                            <script>new Chart(document.getElementById("pie-chart"), {
+                                type: 'pie',
+                                data: {
+                                  labels: ["WordPress", "Drupal", "Joomla", "Magneto", "Others"],
+                                  datasets: [{
+                                    label: "Population (millions)",
+                                    backgroundColor: ["#4E7DB4", "#9DBA5F","#BD5552","#846AA3","#51ACC4"],
+                                    data: [61,5,8,3,23]
+                                  }]
+                                },
+                                options: {
+                                  title: {
+                                    display: true,
+                                    text: 'CMS Pie chart'
+                                  }
+                                }
+                            });</script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card-block">
+                        <div class="title-wrap">
+                            <h3 class="title"><a href="">Doughnut Chart Example</a></h3>
+                        </div>
+                        <div class="content">
+                            <canvas id="doughnut-chart" width="800" height="450"></canvas>
+                            <script>new Chart(document.getElementById("doughnut-chart"),{"type":"doughnut","data":{"labels":["Red","Blue","Yellow"],"datasets":[{"label":"My First Dataset","data":[300,50,100],"backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]}});</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="related-plugins-wrap">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="sec-title"><span>Related Plugins</span></h2>
+                    <h2 class="sec-title"><span>Related Plugins Design 1</span></h2>
                 </div>
                 <div class="col-sm-4">
                     <div class="card-block">
@@ -359,6 +560,60 @@ if ( !defined( 'ABSPATH' ) ) exit;
             </div>
 
             <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="sec-title"><span>Related Plugins Design 2</span></h2>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-sm-4 pad-0 bg-img" style="background-image: url(<?php echo plugin_dir_url( __FILE__ ).'assets/images/img4.jpg'; ?>);">
+                            </div>
+                            <div class="col-sm-8 pad-lt-0 pull-right">
+                                <div class="content">
+                                    <h3 class="title"><a href="">CPM Slider Plugin</a></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae delectus ipsa, ducimus, tempora corporis tenetur a illo perspiciatis.</p>
+                                    <a href="" class="cpm-btn">View Plugin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-sm-4 pad-0 bg-img" style="background-image: url(<?php echo plugin_dir_url( __FILE__ ).'assets/images/img4.jpg'; ?>);">
+                            </div>
+                            <div class="col-sm-8 pad-lt-0 pull-right">
+                                <div class="content">
+                                    <h3 class="title"><a href="">CPM Slider Plugin</a></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae delectus ipsa, ducimus, tempora corporis tenetur a illo perspiciatis.</p>
+                                    <a href="" class="cpm-btn">View Plugin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-sm-4 pad-0 bg-img" style="background-image: url(<?php echo plugin_dir_url( __FILE__ ).'assets/images/img4.jpg'; ?>);">
+                            </div>
+                            <div class="col-sm-8 pad-lt-0 pull-right">
+                                <div class="content">
+                                    <h3 class="title"><a href="">CPM Slider Plugin</a></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae delectus ipsa, ducimus, tempora corporis tenetur a illo perspiciatis.</p>
+                                    <a href="" class="cpm-btn">View Plugin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="sec-title"><span>Card Design Examples</span></h2>
+                </div>
                 <div class="col-sm-12">
                     <div class="card-block">
                         <div class="title-wrap">
