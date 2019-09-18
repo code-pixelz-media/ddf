@@ -99,8 +99,10 @@
 
 /***** ALL THE BASE COLOR CSS *****/
 
-.cpm-plugin-wrap a, .cpm-plugin-wrap a:visited,
-.cpm-plugin-wrap a:hover, .cpm-plugin-wrap a:visited:hover,
+.cpm-plugin-wrap a,
+.cpm-plugin-wrap a:visited,
+.cpm-plugin-wrap a:hover,
+.cpm-plugin-wrap a:visited:hover,
 .cpm-plugin-wrap .tabs-wrap .tab-menu li.ui-tabs-active a{
     color: #8f71d4;
 }
@@ -110,6 +112,7 @@
 .cpm-plugin-wrap .cpm-btn,
 .cpm-plugin-wrap .tabs-wrap .tab-menu li a,
 .cpm-plugin-wrap .cpm-btn.btn2:hover,
+.cpm-plugin-wrap .cpm-btn.btn2:visited:hover,
 .cpm-plugin-wrap .tabs-wrap .tab-menu li a{
     background: #8f71d4;
 }
@@ -510,7 +513,8 @@
  *--------------------------------------------------------------
  */
 
-.cpm-plugin-wrap .cpm-btn{
+.cpm-plugin-wrap .cpm-btn,
+.cpm-plugin-wrap .cpm-btn:visited{
     border: none;
     border-radius: 4px;
     box-shadow: none;
@@ -536,12 +540,14 @@
     vertical-align: top;
 }
 
-.cpm-plugin-wrap .cpm-btn:hover{
+.cpm-plugin-wrap .cpm-btn:hover,
+.cpm-plugin-wrap .cpm-btn:visited:hover{
     background: #393738;
     color: #ffffff;
 }
 
-.cpm-plugin-wrap .cpm-btn.btn2{
+.cpm-plugin-wrap .cpm-btn.btn2,
+.cpm-plugin-wrap .cpm-btn.btn2:visited{
     background: #393738;
 }
 
@@ -967,6 +973,10 @@
 
 .cpm-plugin-wrap .card-block .title-wrap .title{
     margin-bottom: 0;
+}
+
+.cpm-plugin-wrap .card-block .title-wrap .title a{
+    color: inherit;
 }
 
 .cpm-plugin-wrap .card-block .content{
