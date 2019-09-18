@@ -18,19 +18,19 @@
     margin: 20px 20px 20px 0;
 }
 
-p{
+.cpm-plugin-wrap p{
     font-size: 14px;
     font-weight: 400;
     line-height: 1.6;
     margin: 0 0 15px;
 }
 
-img{
+.cpm-plugin-wrap img{
     image-rendering: -webkit-optimize-contrast;
     max-width: 100%;
 }
 
-a, a:visited{
+.cpm-plugin-wrap a, .cpm-plugin-wrap a:visited{
     outline: none;
     text-decoration: none;
 
@@ -39,48 +39,48 @@ a, a:visited{
     transition: all 0.3s ease;
 }
 
-a:hover, a:visited:hover{
+.cpm-plugin-wrap a:hover, .cpm-plugin-wrap a:visited:hover{
     outline: none;
 }
 
-a:focus{
+.cpm-plugin-wrap a:focus{
     box-shadow: none;
     outline: none;
 }
 
-.pull-left{
+.cpm-plugin-wrap .pull-left{
     float: left !important;
 }
 
-.pull-right{
+.cpm-plugin-wrap .pull-right{
     float: right !important;
 }
 
-.text-center{
+.cpm-plugin-wrap .text-center{
     text-align: center;
 }
 
-.text-left{
+.cpm-plugin-wrap .text-left{
     text-align: left;
 }
 
-.text-right{
+.cpm-plugin-wrap .text-right{
     text-align: right;
 }
 
-.bg-img{
+.cpm-plugin-wrap .bg-img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-hr{
+.cpm-plugin-wrap hr{
     border: none;
     border-top: 1px solid #eeeeee;
     margin: 40px 0;
 }
 
-.border-bottom{
+.cpm-plugin-wrap .border-bottom{
     border-bottom: 1px solid #e6e6e6;
     margin-bottom: 30px;
     padding-bottom: 15px;
@@ -99,8 +99,8 @@ hr{
 
 /***** ALL THE BASE COLOR CSS *****/
 
-a, a:visited,
-a:hover, a:visited:hover,
+.cpm-plugin-wrap a, .cpm-plugin-wrap a:visited,
+.cpm-plugin-wrap a:hover, .cpm-plugin-wrap a:visited:hover,
 .cpm-plugin-wrap .tabs-wrap .tab-menu li.ui-tabs-active a{
     color: #8f71d4;
 }
@@ -129,43 +129,43 @@ a:hover, a:visited:hover,
  *--------------------------------------------------------------
  */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
+.cpm-plugin-wrap h1,
+.cpm-plugin-wrap h2,
+.cpm-plugin-wrap h3,
+.cpm-plugin-wrap h4,
+.cpm-plugin-wrap h5,
+.cpm-plugin-wrap h6{
     font-weight: 600;
     line-height: 1.3;
     margin: 0 0 12px;
     padding: 0;
 }
 
-h1{
+.cpm-plugin-wrap h1{
     font-size: 36px;
 }
 
-h2{
+.cpm-plugin-wrap h2{
     font-size: 30px;
 }
 
-h3{
+.cpm-plugin-wrap h3{
     font-size: 24px;
 }
 
-h4{
+.cpm-plugin-wrap h4{
     font-size: 18px;
 }
 
-h5{
+.cpm-plugin-wrap h5{
     font-size: 14px;
 }
 
-h6{
+.cpm-plugin-wrap h6{
     font-size: 12px;
 }
 
-.dashicons, .dashicons-before:before{
+.cpm-plugin-wrap .dashicons, .cpm-plugin-wrap .dashicons-before:before{
     font-size: 16px;
     margin-right: 5px;
     vertical-align: middle;
@@ -419,23 +419,23 @@ h6{
  *--------------------------------------------------------------
  */
 
-.pad-0{
+.cpm-plugin-wrap .pad-0{
     padding: 0;
 }
 
-.pad-tp-0{
+.cpm-plugin-wrap .pad-tp-0{
     padding-top: 0;
 }
 
-.pad-rt-0{
+.cpm-plugin-wrap .pad-rt-0{
     padding-right: 0;
 }
 
-.pad-bt-0{
+.cpm-plugin-wrap .pad-bt-0{
     padding-bottom: 0;
 }
 
-.pad-lt-0{
+.cpm-plugin-wrap .pad-lt-0{
     padding-left: 0;
 }
 
@@ -444,10 +444,10 @@ h6{
  *--------------------------------------------------------------
  */
 
-.success-box,
-.error-box,
-.info-box,
-.warning-box{
+.cpm-plugin-wrap .success-box,
+.cpm-plugin-wrap .error-box,
+.cpm-plugin-wrap .info-box,
+.cpm-plugin-wrap .warning-box{
     border-radius: 2px;
     font-size: 16px;
     margin: 10px 0;
@@ -455,10 +455,10 @@ h6{
     position: relative;
 }
 
-.success-box:before,
-.error-box:before,
-.info-box:before,
-.warning-box:before{
+.cpm-plugin-wrap .success-box:before,
+.cpm-plugin-wrap .error-box:before,
+.cpm-plugin-wrap .info-box:before,
+.cpm-plugin-wrap .warning-box:before{
     display: inline-block;
     font-family: 'dashicons';
     font-size: 18px;
@@ -469,39 +469,39 @@ h6{
     vertical-align: top;
 }
 
-.success-box{
+.cpm-plugin-wrap .success-box{
     background-color: #DFF2BF;
     color: #4F8A10;
 }
 
-.success-box:before {
+.cpm-plugin-wrap .success-box:before {
     content: '\f12a';
 }
 
-.error-box{
+.cpm-plugin-wrap .error-box{
     background-color: #FFBABA;
     color: #D8000C;
 }
 
-.error-box:before {
+.cpm-plugin-wrap .error-box:before {
     content: '\f153';
 }
 
-.info-box{
+.cpm-plugin-wrap .info-box{
     background-color: #d9edf7;
     color: #31708f;
 }
 
-.info-box:before {
+.cpm-plugin-wrap .info-box:before {
     content: '\f348';
 }
 
-.warning-box{
+.cpm-plugin-wrap .warning-box{
     background-color: #FEEFB3;
     color: #9F6000;
 }
 
-.warning-box:before {
+.cpm-plugin-wrap .warning-box:before {
     content: '\f534';
 }
 
@@ -1053,8 +1053,8 @@ h6{
 
 @media ( max-width: 767px){
 
-    .pull-left,
-    .pull-right{
+    .cpm-plugin-wrap .pull-left,
+    .cpm-plugin-wrap .pull-right{
         float: none !important;
     }
 
