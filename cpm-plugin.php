@@ -35,13 +35,14 @@ if ( !class_exists('Cpm_Plugin') ) {
         * Enqueue required admin styles and scripts.
         */
         public function Cpm_Plugin_admin_scripts_style() {
-            wp_enqueue_style( 'admin-style', plugin_dir_url( __FILE__ ).'assets/css/admin-style.css' );
-            wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap' );
+            if ( isset( $_GET['page'] ) && 'cpm-plugin' == $_GET['page'] ) {
+                wp_enqueue_style( 'admin-style', plugin_dir_url( __FILE__ ).'assets/css/admin-style.css' );
+                wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap' );
 
-            wp_enqueue_script('jquery-ui-tabs');
-            wp_enqueue_script( 'admin-script', plugin_dir_url( __FILE__ ).'assets/js/admin-script.js' );
-            wp_enqueue_script( 'chart-script', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' );
-
+                wp_enqueue_script('jquery-ui-tabs');
+                wp_enqueue_script( 'admin-script', plugin_dir_url( __FILE__ ).'assets/js/admin-script.js' );
+                wp_enqueue_script( 'chart-script', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' );
+            }
         }
 
 
@@ -49,7 +50,7 @@ if ( !class_exists('Cpm_Plugin') ) {
         * Add menu page.
         */
         public function Cpm_Plugin_register_menu_page() {
-            add_menu_page( __( 'CPM Backend', 'Cpm_Plugin'), 'CPM Backend', 'manage_options', 'cpm-plugin.php', array($this, 'Cpm_Plugin_add_setting_page' ), '', 20 );
+            add_menu_page( __( 'CPM Backend', 'Cpm_Plugin'), 'CPM Backend', 'manage_options', 'cpm-plugin', array($this, 'Cpm_Plugin_add_setting_page' ), '', 20 );
         }
 
         /**

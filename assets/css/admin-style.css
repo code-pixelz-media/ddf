@@ -31,7 +31,6 @@ img{
 }
 
 a, a:visited{
-    color: inherit;
     outline: none;
     text-decoration: none;
 
@@ -41,7 +40,6 @@ a, a:visited{
 }
 
 a:hover, a:visited:hover{
-    color: #8f71d4;
     outline: none;
 }
 
@@ -93,6 +91,38 @@ hr{
     list-style-type: disc;
     margin: 1em 0 1em 2em;
 }
+
+/*--------------------------------------------------------------
+ * ## CPM PLUGIN BASE COLOR
+ *--------------------------------------------------------------
+ */
+
+/***** ALL THE BASE COLOR CSS *****/
+
+a, a:visited,
+a:hover, a:visited:hover,
+.cpm-plugin-wrap .tabs-wrap .tab-menu li.ui-tabs-active a{
+    color: #8f71d4;
+}
+
+/***** ALL THE BASE BACKGROUND COLOR CSS *****/
+
+.cpm-plugin-wrap .cpm-btn,
+.cpm-plugin-wrap .tabs-wrap .tab-menu li a,
+.cpm-plugin-wrap .cpm-btn.btn2:hover,
+.cpm-plugin-wrap .tabs-wrap .tab-menu li a{
+    background: #8f71d4;
+}
+
+/***** ALL THE BASE BORDER COLOR CSS *****/
+
+.cpm-plugin-wrap .header-wrap,
+.cpm-plugin-wrap .footer-wrap,
+.cpm-plugin-wrap .card-block figure,
+.cpm-plugin-wrap .footer-wrap{
+    border-color: #8f71d4;
+}
+
 
 /*--------------------------------------------------------------
  * ## CPM PLUGIN HEADING
@@ -481,7 +511,6 @@ h6{
  */
 
 .cpm-plugin-wrap .cpm-btn{
-    background: #8f71d4;
     border: none;
     border-radius: 4px;
     box-shadow: none;
@@ -514,10 +543,6 @@ h6{
 
 .cpm-plugin-wrap .cpm-btn.btn2{
     background: #393738;
-}
-
-.cpm-plugin-wrap .cpm-btn.btn2:hover{
-    background: #8f71d4;
 }
 
 /*--------------------------------------------------------------
@@ -637,7 +662,8 @@ h6{
 .cpm-plugin-wrap .header-wrap,
 .cpm-plugin-wrap .footer-wrap{
     background: #ffffff;
-    border-top: 5px solid #8f71d4;
+    border-top-width: 5px;
+    border-top-style: solid;
     border-radius: 4px;
     overflow: hidden;
     padding: 20px 15px;
@@ -748,7 +774,6 @@ h6{
 }
 
 .cpm-plugin-wrap .tabs-wrap .tab-menu li a {
-    background: #8f71d4;
     border: none;
     box-shadow: none;
     border-top-left-radius: 4px;
@@ -763,7 +788,6 @@ h6{
 
 .cpm-plugin-wrap .tabs-wrap .tab-menu li.ui-tabs-active a{
     background: #ffffff;
-    color: #8f71d4;
 }
 
 .cpm-plugin-wrap .tabs-wrap .tab-content{
@@ -920,7 +944,8 @@ h6{
 }
 
 .cpm-plugin-wrap .card-block figure{
-    border-bottom: 3px solid #8f71d4;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
     margin: 0;
 }
 
@@ -960,7 +985,8 @@ h6{
 
 .cpm-plugin-wrap .footer-wrap{
     border-top: none;
-    border-bottom: 5px solid #8f71d4;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
     font-size: 13px;
     font-weight: 500;
 }
