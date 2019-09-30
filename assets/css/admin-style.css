@@ -113,7 +113,10 @@
 .cpm-plugin-wrap .tabs-wrap .tab-menu li a,
 .cpm-plugin-wrap .cpm-btn.btn2:hover,
 .cpm-plugin-wrap .cpm-btn.btn2:visited:hover,
-.cpm-plugin-wrap .tabs-wrap .tab-menu li a{
+.cpm-plugin-wrap .tabs-wrap .tab-menu li a,
+.checkbox-wrap.custom input[type="checkbox"]:checked+span:before,
+.checkbox-wrap.custom input[type="checkbox"]:checked+span:after,
+.radio-wrap.custom input[type="radio"]:checked+span:after{
     background: #8f71d4;
 }
 
@@ -122,10 +125,22 @@
 .cpm-plugin-wrap .header-wrap,
 .cpm-plugin-wrap .footer-wrap,
 .cpm-plugin-wrap .card-block figure,
-.cpm-plugin-wrap .footer-wrap{
+.cpm-plugin-wrap .footer-wrap,
+.radio-wrap.custom input[type="radio"]:checked+span:before{
     border-color: #8f71d4;
 }
 
+/***** ALL CHECKBOX & RADIOBOX COLOR CSS *****/
+
+.checkbox-wrap.custom input[type="checkbox"]+span:before{
+    background: #dddddd;
+}
+
+.checkbox-wrap.custom input[type="checkbox"]+span:after{
+    background: #7d7d7d;
+}
+
+/**********************************************************************************************/
 
 /*--------------------------------------------------------------
  * ## CPM PLUGIN HEADING
@@ -567,16 +582,6 @@
     overflow: hidden;
 }
 
-.cpm-plugin-wrap form input[type=radio],
-.cpm-plugin-wrap form input[type=checkbox],
-.cpm-plugin-wrap .wp-color-result.button {
-    margin: 10px 5px 10px 0;
-}
-
-.cpm-plugin-wrap .radio-wrap+.radio-wrap{
-    margin-left: 15px;
-}
-
 .cpm-plugin-wrap form label{
     display: block;
     float: left;
@@ -657,6 +662,130 @@
 
 .cpm-plugin-wrap form .cpm-btn{
     margin-left: 30%;
+}
+
+/*--------------------------------------------------------------
+ * ## CPM PLUGIN CHECKBOX-WRAP & RADIO-WRAP
+ *--------------------------------------------------------------
+ */
+
+.cpm-plugin-wrap form input[type=radio],
+.cpm-plugin-wrap form input[type=checkbox],
+.cpm-plugin-wrap .wp-color-result.button {
+    margin: 10px 5px 10px 0;
+}
+
+.cpm-plugin-wrap .radio-wrap+.radio-wrap{
+    margin-left: 15px;
+}
+
+.checkbox-wrap.custom,
+.radio-wrap.custom{
+    display: inline-block;
+    padding: 10px 0 6px;
+    position: relative;
+}
+
+.checkbox-wrap.custom input[type="checkbox"],
+.radio-wrap.custom input[type="radio"]{
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.checkbox-wrap.custom input[type="checkbox"]+span,
+.radio-wrap.custom input[type="radio"]+span{
+    cursor: pointer;
+    display: block;
+    min-height: 20px;
+    min-width: 50px;
+    padding-left: 50px;
+    position: relative;
+}
+
+.checkbox-wrap.custom input[type="checkbox"]+span:before{
+    border-radius: 100px;
+    content: '';
+    height: 12px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+    width: 40px;
+
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.checkbox-wrap.custom input[type="checkbox"]+span:after{
+    border-radius: 100%;
+    content: '';
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.checkbox-wrap.custom input[type="checkbox"]:checked+span:before{
+    opacity: 0.3;
+}
+
+.checkbox-wrap.custom input[type="checkbox"]:checked+span:after{
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.radio-wrap.custom input[type="radio"]+span{
+    padding-left: 30px;
+}
+
+.radio-wrap.custom input[type="radio"]+span:before{
+    border: 2px solid #7d7d7d;
+    border-radius: 100px;
+    content: '';
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.radio-wrap.custom input[type="radio"]+span:after{
+    border-radius: 100%;
+    content: '';
+    height: 10px;
+    left: 5px;
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    width: 10px;
+
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.radio-wrap.custom input[type="radio"]:checked+span:after{
+    opacity: 1;
 }
 
 /********************************************************************************************************/
@@ -844,6 +973,13 @@
 }
 
 /*--------------------------------------------------------------
+ * ## CPM PLUGIN ACCORDION-WRAP
+ *--------------------------------------------------------------
+ */
+
+.cpm-plugin-wrap .accordion-wrap
+
+/*--------------------------------------------------------------
  * ## CPM PLUGIN CPM-TABLE-WRAP
  *--------------------------------------------------------------
  */
@@ -933,7 +1069,8 @@
     margin-top: 50px;
 }
 
-.cpm-plugin-wrap .card-block{
+.cpm-plugin-wrap .card-block,
+.cpm-plugin-wrap .accordion-wrap{
     background: #ffffff;
     -webkit-box-shadow: 8px 8px 8px 0 rgba(187, 187, 187, 0.2);
     -moz-box-shadow: 8px 8px 8px 0 rgba(187, 187, 187, 0.2);

@@ -82,18 +82,23 @@ if ( !defined( 'ABSPATH' ) ) exit;
                         <div class="form-group">
                             <label for="">Enable form</label>
                             <div class="form-control-wrap">
-                                <input type="checkbox">
+                                <div class="checkbox-wrap custom">
+                                    <input type="checkbox">
+                                    <span class="custom-checkbox"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Form position</label>
                             <div class="form-control-wrap">
-                                <span class="radio-wrap">
-                                    <input type="radio" value="left" name=""> Left
-                                </span>
-                                <span class="radio-wrap">
-                                    <input type="radio" value="right" name="" checked="checked"> Right
-                                </span>
+                                <div class="radio-wrap custom">
+                                    <input type="radio" value="left" name="">
+                                    <span class="custom-radio">Left</span>
+                                </div>
+                                <div class="radio-wrap custom">
+                                    <input type="radio" value="right" name="" checked="checked">
+                                    <span class="custom-radio">Right</span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -329,10 +334,21 @@ if ( !defined( 'ABSPATH' ) ) exit;
             </div>
         </div>
 
+        <div id="accordion" class="accordion-wrap">
+            <h3>Section 1</h3>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officia consectetur consequatur omnis adipisci harum, perspiciatis ducimus quibusdam distinctio maxime sint dignissimos doloremque dolorum exercitationem eum, id assumenda qui consequuntur.
+            </div>
+
+            <h3>Section 2</h3>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officia consectetur consequatur omnis adipisci harum, perspiciatis ducimus quibusdam distinctio maxime sint dignissimos doloremque dolorum exercitationem eum, id assumenda qui consequuntur.
+            </div>
+
+        </div>
+
         <div class="chart-sec">
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="card-block">
+                    <div class="card-block bar-chart-block">
                         <div class="title-wrap">
                             <h3 class="title"><a href="">Bar Chart Example</a></h3>
                         </div>
@@ -372,7 +388,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card-block">
+                    <div class="card-block horibar-chart-block">
                         <div class="title-wrap">
                             <h3 class="title"><a href="">Horizontal Bar Chart Example</a></h3>
                         </div>
@@ -412,18 +428,27 @@ if ( !defined( 'ABSPATH' ) ) exit;
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card-block">
+                    <div class="card-block line-chart-block">
                         <div class="title-wrap">
                             <h3 class="title"><a href="">Line Chart Example</a></h3>
                         </div>
                         <div class="content">
                             <canvas id="line-chart" width="800" height="450"></canvas>
-                            <script>new Chart(document.getElementById("line-chart"),{"type":"line","data":{"labels":["January","February","March","April","May","June","July"],"datasets":[{"label":"Line Chart Example","data":[65,59,80,81,56,55,40],"fill":false,"borderColor":"rgb(75, 192, 192)","lineTension":0.1}]},"options":{}});</script>
+                            <script>new Chart(document.getElementById("line-chart"),{"type":"line","data":{"labels":["January","February","March","April","May","June","July"],"datasets":[{"label":"Line Chart Example","data":[65,59,80,81,56,55,40],"fill":false,"borderColor":"rgb(75, 192, 192)","lineTension":0.1}]},"options":{scales: {
+                                            yAxes: [
+                                                {
+                                                    ticks:{
+                                                        reverse: true,
+                                                        beginAtZero:true
+                                                    }
+                                                }
+                                            ]
+                                        }}});</script>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card-block">
+                    <div class="card-block multiline-chart-block">
                         <div class="title-wrap">
                             <h3 class="title"><a href="">Multiple Line Chart Example</a></h3>
                         </div>
@@ -474,7 +499,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card-block">
+                    <div class="card-block pie-chart-block">
                         <div class="title-wrap">
                             <h3 class="title"><a href="">Pie Chart Example</a></h3>
                         </div>
@@ -501,7 +526,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card-block">
+                    <div class="card-block doughnut-chart-block">
                         <div class="title-wrap">
                             <h3 class="title"><a href="">Doughnut Chart Example</a></h3>
                         </div>

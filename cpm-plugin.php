@@ -38,7 +38,8 @@ if ( !class_exists('Cpm_Plugin') ) {
             wp_enqueue_style( 'admin-style', plugin_dir_url( __FILE__ ).'assets/css/admin-style.css' );
             wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap' );
 
-            wp_enqueue_script('jquery-ui-tabs');
+            wp_enqueue_script('jquery');
+            wp_enqueue_script( 'jquery-ui-accordion');
             wp_enqueue_script( 'admin-script', plugin_dir_url( __FILE__ ).'assets/js/admin-script.js' );
             wp_enqueue_script( 'chart-script', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' );
         }
