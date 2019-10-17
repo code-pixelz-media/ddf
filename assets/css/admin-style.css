@@ -116,7 +116,8 @@
 .cpm-plugin-wrap .tabs-wrap .tab-menu li a,
 .checkbox-wrap.custom input[type="checkbox"]:checked+span:before,
 .checkbox-wrap.custom input[type="checkbox"]:checked+span:after,
-.radio-wrap.custom input[type="radio"]:checked+span:after{
+.radio-wrap.custom input[type="radio"]:checked+span:after,
+.cpm-plugin-wrap .acc-link{
     background: #8f71d4;
 }
 
@@ -185,8 +186,10 @@
 
 .cpm-plugin-wrap .dashicons, .cpm-plugin-wrap .dashicons-before:before{
     font-size: 16px;
-    margin-right: 5px;
+    height: auto;
+    margin-right: 10px;
     vertical-align: middle;
+    width: auto;
 }
 
 /*--------------------------------------------------------------
@@ -977,7 +980,53 @@
  *--------------------------------------------------------------
  */
 
-.cpm-plugin-wrap .accordion-wrap
+.cpm-plugin-wrap .accordion-wrap {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cpm-plugin-wrap .acc-item{
+    margin-bottom: 1px;
+}
+
+.cpm-plugin-wrap .acc-link{
+    color: #ffffff !important;
+    display: block;
+    font-size: 18px;
+    padding: 10px 40px 10px 20px;
+    position: relative;
+}
+
+.cpm-plugin-wrap .acc-link:before{
+    content: '\f347';
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.cpm-plugin-wrap .acc-link.active:before{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+}
+
+.cpm-plugin-wrap .acc-content{
+    background: #f1f1f1;
+    display: none;
+    padding: 20px;
+}
 
 /*--------------------------------------------------------------
  * ## CPM PLUGIN CPM-TABLE-WRAP
@@ -1069,8 +1118,7 @@
     margin-top: 50px;
 }
 
-.cpm-plugin-wrap .card-block,
-.cpm-plugin-wrap .accordion-wrap{
+.cpm-plugin-wrap .card-block{
     background: #ffffff;
     -webkit-box-shadow: 8px 8px 8px 0 rgba(187, 187, 187, 0.2);
     -moz-box-shadow: 8px 8px 8px 0 rgba(187, 187, 187, 0.2);
@@ -1122,6 +1170,32 @@
 
 .cpm-plugin-wrap .card-block .cpm-btn{
     margin-top: 5px;
+}
+
+/*--------------------------------------------------------------
+ * ## CPM PLUGIN LOCK-BLOCK
+ *--------------------------------------------------------------
+ */
+
+.cpm-plugin-wrap .lock-block{
+    background: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.cpm-plugin-wrap .lock-block .cpm-btn{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 /********************************************************************************************************/

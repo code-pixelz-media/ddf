@@ -330,19 +330,36 @@ if ( !defined( 'ABSPATH' ) ) exit;
                         <li><a href="">this is just a normal list</a></li>
                         <li><a href="">this is just a normal list</a></li>
                     </ul>
+
                 </div>
             </div>
         </div>
 
-        <div id="accordion" class="accordion-wrap">
-            <h3>Section 1</h3>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officia consectetur consequatur omnis adipisci harum, perspiciatis ducimus quibusdam distinctio maxime sint dignissimos doloremque dolorum exercitationem eum, id assumenda qui consequuntur.
-            </div>
+        <div class="sec">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card-block">
+                        <div class="title-wrap">
+                            <h3 class="title">Accordion Example</h3>
+                        </div>
+                        <div class="content">
+                            <div class="accordion-wrap">
+                                <div class="acc-item">
+                                    <a href="#" class="acc-link dashicons-before">Section 1</a>
+                                    <div class="acc-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officia consectetur consequatur omnis adipisci harum, perspiciatis ducimus quibusdam distinctio maxime sint dignissimos doloremque dolorum exercitationem eum, id assumenda qui consequuntur.
+                                    </div>
+                                </div>
 
-            <h3>Section 2</h3>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officia consectetur consequatur omnis adipisci harum, perspiciatis ducimus quibusdam distinctio maxime sint dignissimos doloremque dolorum exercitationem eum, id assumenda qui consequuntur.
+                                <div class="acc-item">
+                                    <a href="#" class="acc-link dashicons-before">Section 2</a>
+                                    <div class="acc-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officia consectetur consequatur omnis adipisci harum, perspiciatis ducimus quibusdam distinctio maxime sint dignissimos doloremque dolorum exercitationem eum, id assumenda qui consequuntur.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
 
         <div class="chart-sec">
@@ -449,6 +466,9 @@ if ( !defined( 'ABSPATH' ) ) exit;
                 </div>
                 <div class="col-sm-6">
                     <div class="card-block multiline-chart-block">
+                        <div class="lock-block">
+                            <a href="#" class="cpm-btn dashicons-before dashicons-visibility">Unlock</a>
+                        </div>
                         <div class="title-wrap">
                             <h3 class="title"><a href="">Multiple Line Chart Example</a></h3>
                         </div>
