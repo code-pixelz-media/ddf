@@ -35,8 +35,8 @@ if ( ! class_exists( 'Cpm_Plugin' ) ) {
 		 * Enqueue required admin styles and scripts.
 		 */
 		public function Cpm_Plugin_admin_scripts_style() {
-			wp_enqueue_style( 'admin-style', plugin_dir_url( __FILE__ ) . 'assets/css/admin-style.css' );
 			wp_enqueue_style( 'admin-select2', plugin_dir_url( __FILE__ ) . 'assets/css/select2.min.css' );
+			wp_enqueue_style( 'admin-style', plugin_dir_url( __FILE__ ) . 'assets/css/admin-style.css' );
 			wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap' );
 
 			wp_enqueue_script( 'jquery' );
