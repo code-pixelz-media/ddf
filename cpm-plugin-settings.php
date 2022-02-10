@@ -49,7 +49,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
                             <div class="form-control-wrap">
                                 <input class="form-control" type="text" placeholder="Name" onfocus="this.placeholder=''" onblur="this.placeholder='Name'">
                             </div>
-                        </div>
+                        </div> 
                         <div class="form-group">
                             <label for="">Email</label>
                             <div class="form-control-wrap">
@@ -79,6 +79,44 @@ if ( !defined( 'ABSPATH' ) ) exit;
                                 </select>
                             </div>
                         </div>
+                        <!-- by developer ravi -->
+                        <div class="form-group">
+                            <label for="">Where To Display? </label>
+                            <div class="form-control-wrap">
+                                <select class="cpm-multiselect form-control" name="multi_select[]" multiple="multiple">
+                                <option value="Nepal">Nepal</option>
+                                    <option value="England">England</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="New Zealand">New Zealand</option>
+                                </select>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="">Display Position</label>
+                            <div class="form-control-wrap">
+                                <select name="cc" id="cc" class="cpm_basic_single_select form-control">
+                                    <option value="Nepal">Before Content</option>
+                                    <option value="England">After Content</option>
+                                
+                                
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Select Icon Type</label>
+                            <div class="form-control-wrap">
+                                <select class="cpm_single_select form-control" name="single_select">
+                                    <option value="AL">Heart</option>
+                                    <option value="WY">Arrow</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- by developer ravi -->
                         <div class="form-group">
                             <label for="">Enable form</label>
                             <div class="form-control-wrap">

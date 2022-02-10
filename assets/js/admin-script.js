@@ -16,6 +16,14 @@
                 $(this).siblings(".acc-content").slideDown(250);
             }
         });
+
+        $('.cpm-multiselect').select2();
+        $('.cpm_single_select').select2();
+        $(".cpm_basic_single_select").select2({
+            placeholder: "Select a Position",
+            allowClear: true
+        });
+
     }); // END OF DOCUMENT READY
 })(jQuery);
 
