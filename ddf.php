@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Cpm Plugin
- * Plugin URI:
- * Description: A custom made CPM Plugin
- * Version:1.0
- * Author: Shishta Pradhan
- * Text Domain: Cpm_Plugin
+ * Plugin Name: Dashboard Design Framework 
+ * Plugin URI: https://codepixelzmedia.com
+ * Description: A framework for Dashboard design for WordPress Admin Panel
+ * Version:1.0.0
+ * Author: codepixelzmedia
+ * Text Domain: ddf
  * License: GPLv3 or later
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,19 +14,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /**
-* Initialize Cpm_Plugin class
+* Initialize DDF class
 */
-if ( ! class_exists( 'Cpm_Plugin' ) ) {
+if ( ! class_exists( 'DDF' ) ) {
 
-	class Cpm_Plugin {
+	class DDF {
 
 		/**
 		 * Class constructor
 		 */
 		function __construct() {
 
-			add_action( 'admin_menu', array( $this, 'Cpm_Plugin_register_menu_page' ) );
-			add_action( 'admin_enqueue_scripts', array( $this, 'Cpm_Plugin_admin_scripts_style' ) );
+			add_action( 'admin_menu', array( $this, 'ddf_register_menu_page' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'ddf_admin_scripts_style' ) );
+
+			/* All the files that are required will be called here */
+			require_once('admin/hooks.php');
 
 		}
 
@@ -34,12 +37,11 @@ if ( ! class_exists( 'Cpm_Plugin' ) ) {
 		/**
 		 * Enqueue required admin styles and scripts.
 		 */
-		public function Cpm_Plugin_admin_scripts_style() {
+		public function ddf_admin_scripts_style() {
 			wp_enqueue_style( 'admin-select2', plugin_dir_url( __FILE__ ) . 'assets/css/select2.min.css' );
 			wp_enqueue_style( 'admin-style', plugin_dir_url( __FILE__ ) . 'assets/css/admin-style.css' );
 			wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap' );
 
-			wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'jquery-ui-accordion' );
 			wp_enqueue_script( 'jquery-ui-tabs' );
 			wp_enqueue_script( 'admin-script', plugin_dir_url( __FILE__ ) . 'assets/js/admin-script.js' );
@@ -51,20 +53,20 @@ if ( ! class_exists( 'Cpm_Plugin' ) ) {
 		/**
 		 * Add menu page.
 		 */
-		public function Cpm_Plugin_register_menu_page() {
-			add_menu_page( __( 'CPM Backend', 'Cpm_Plugin' ), 'CPM Backend', 'manage_options', 'cpm-plugin', array( $this, 'Cpm_Plugin_add_setting_page' ), '', 20 );
+		public function ddf_register_menu_page() {
+			add_menu_page( __( 'DDF Dashboard', 'ddf' ), 'DDF Dashboard', 'manage_options', 'ddf', array( $this, 'ddf_add_setting_page' ), '', 20 );
 		}
 
 		/**
 		 * Callback function of add_menu_page. Displays the page's content.
 		 */
-		public function Cpm_Plugin_add_setting_page() {
-			require plugin_dir_path( __FILE__ ) . 'cpm-plugin-settings.php';
+		public function ddf_add_setting_page() {
+			require plugin_dir_path( __FILE__ ) . 'ddf-settings.php';
 
 		}
 
 
 	}
 
-	$Cpm_Plugin = new Cpm_Plugin();
+	$ddf = new DDF();
 }

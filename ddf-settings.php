@@ -10,7 +10,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
             <div class="logo-wrap col-md-4">
                 <img src="<?php echo plugin_dir_url( __FILE__ ).'assets/images/logo.png'; ?>" alt="logo" class="logo">
                 <div class="title">
-                    <h1><?php _e( 'CPM Plugin Settings', 'Cpm_Plugin' ); ?></h1>
+                    <h1><?php _e( 'DDF Settings', 'ddf' ); ?></h1>
                     <p>
                         <a href="codepixelzmedia.com"><img src="<?php echo plugin_dir_url( __FILE__ ).'assets/images/cpm-logo.png'; ?>" alt="cpm-logo" class="cpm-logo"></a>
                     </p>
@@ -32,10 +32,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
         <div id="tabs-wrap" class="tabs-wrap">
 
             <ul class="tab-menu">
-                <li class="nav-tab"><a href="#general" class="dashicons-before dashicons-editor-alignleft"><?php _e( 'General', 'Cpm_Plugin' ); ?></a></li>
-                <li class="nav-tab"><a href="#options" class="dashicons-before dashicons-admin-generic"><?php _e( 'Options', 'Cpm_Plugin' ); ?></a></li>
-                <li class="nav-tab"><a href="#advanced" class="dashicons-before dashicons-admin-settings"><?php _e( 'Advanced', 'Cpm_Plugin' ); ?></a></li>
-                <li class="nav-tab"><a href="#extra" class="dashicons-before dashicons-admin-tools"><?php _e( 'Extras', 'Cpm_Plugin' ); ?></a></li>
+                <?php ddf_settings_tab_menu(); ?>
             </ul>
 
             <div class="tab-content">
@@ -370,6 +367,9 @@ if ( !defined( 'ABSPATH' ) ) exit;
                     </ul>
 
                 </div>
+                <?php
+                    ddf_settings_tab_content();
+                ?>
             </div>
         </div>
 
